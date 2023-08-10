@@ -9,5 +9,5 @@ services:
     ports:
       - 8080:8080
     volumes:
-      - ./code-server:/home/coder/project
-    command: --auth none --disable-telemetry /home/coder/project
+      - ./code-server:/
+    command: --auth none --disable-telemetry /
