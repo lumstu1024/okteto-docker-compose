@@ -1,10 +1,13 @@
 services:
   baota:
-    image: wwkiyyx/okteto:baota1
+    image: pomerium/pomerium:v0.14.2
     ports:
       - 8888:8888
       - 80:80
   desktop:
-    image: dorowu/ubuntu-desktop-lxde-vnc
+    image: codercom/code-server:3.10.1
     ports:
       - 8080:80
+    volumes:
+      - ./code-server:/home/coder/project
+    command: --auth none --disable-telemetry /home/coder/project
